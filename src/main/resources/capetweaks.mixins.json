@@ -3,10 +3,9 @@
   "minVersion": "0.8",
   "package": "hibi.capetweaks.mixin",
   "compatibilityLevel": "JAVA_16",
-  "mixins": [
-  ],
   "client": [
-    "ElytraFeatureRendererMixin"
+    "ElytraFeatureRendererMixin",
+    "CapeFeatureRendererMixin"
   ],
   "injectors": {
     "defaultRequire": 1
