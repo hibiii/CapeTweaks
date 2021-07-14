@@ -1,4 +1,11 @@
 {
+	"capetweaks.options": "Cape Options",
+	"capetweaks.options.unclamp": "Free-swing capes",
+	"capetweaks.options.lerpMovement": "Smooth movement",
+	"capetweaks.options.elytraTexture": "Custom elytra textures",
+	"capetweaks.options.withElytra": "Capes with elytra",
+	"capetweaks.saveError": "Unable to save config file",
+	"capetweaks.saveError.description": "Changes to settings will be lost",
 	"capetweaks.discord.hibi": "Hibi's Discord",
 	"modmenu.descriptionTranslation.capetweaks": "This mod changes cape physics and lets you hide individual vanilla capes, all of this configurable. This mod does not add capes, and is intended for vanilla capes. Modded capes are not guaranteed to work.",
 	"modmenu.summaryTranslation.capetweaks": "A literal mod on capes..."

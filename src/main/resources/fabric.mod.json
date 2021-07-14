@@ -19,6 +19,9 @@
   "entrypoints": {
     "client": [
       "hibi.capetweaks.ClientInit"
+    ],
+    "modmenu": [
+      "hibi.capetweaks.MenuIntegration"
     ]
   },
   "mixins": [
