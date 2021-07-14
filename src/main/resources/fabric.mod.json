@@ -1,38 +1,46 @@
 {
   "schemaVersion": 1,
-  "id": "modid",
+  "id": "capetweaks",
   "version": "${version}",
 
-  "name": "Example Mod",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "name": "Cape Tweaks",
+  "description": "This mod adds tweaks for the vanilla cape as well as options to hide them individually.",
   "authors": [
-    "Me!"
+    "Hibi"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "sources": "https://github.com/Hibiii/CapeTweaks"
   },
 
-  "license": "CC0-1.0",
-  "icon": "assets/modid/icon.png",
+  "license": "Unlicense",
+  "icon": "assets/capetweaks/icon.png",
 
-  "environment": "*",
+  "environment": "client",
   "entrypoints": {
-    "main": [
-      "net.fabricmc.example.ExampleMod"
+    "client": [
+      "hibi.capetweaks.ClientInit"
     ]
   },
   "mixins": [
-    "modid.mixins.json"
+    "capetweaks.mixins.json"
   ],
 
   "depends": {
     "fabricloader": ">=0.11.3",
     "fabric": "*",
-    "minecraft": "1.17.x",
+    "minecraft": ">=1.17",
     "java": ">=16"
   },
   "suggests": {
-    "another-mod": "*"
+    "kappa": ">=3.0.0"
+  },
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.github_releases": "https://github.com/Hibiii/CapeTweaks/releases/",
+        "modmenu.discord": "https://discord.gg/Zef3c27dN2",
+        "capetweaks.discord.hibi": "https://dsc.bio/hibi"
+      }
+    }
   }
 }
