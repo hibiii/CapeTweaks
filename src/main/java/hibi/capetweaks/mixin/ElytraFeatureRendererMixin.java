@@ -15,7 +15,7 @@ public class ElytraFeatureRendererMixin {
 		method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/entity/Entity;FFFFFF)V",
 		at = @At(
 			value = "INVOKE",
-			target = "Lnet/minecraft/client/AbstractClientPlayerEntity;canRenderElytraTexture()Z"
+			target = "Lnet/minecraft/client/network/AbstractClientPlayerEntity;canRenderElytraTexture()Z"
 		)
 	)
 	private boolean canElytra(AbstractClientPlayerEntity acpe) {
@@ -26,7 +26,7 @@ public class ElytraFeatureRendererMixin {
 		method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/entity/Entity;FFFFFF)V",
 		at = @At(
 			value = "INVOKE",
-			target = "Lnet/minecraft/client/AbstractClientPlayerEntity;canRenderCapeTexture()Z"
+			target = "Lnet/minecraft/client/network/AbstractClientPlayerEntity;canRenderCapeTexture()Z"
 		)
 	)
 	private boolean canCape(AbstractClientPlayerEntity acpe) {
