@@ -12,7 +12,7 @@ import hibi.capetweaks.Config;
 @Mixin(ElytraFeatureRenderer.class)
 public class ElytraFeatureRendererMixin {
 	@Redirect(
-		method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/entity/Entity;FFFFFF)V",
+		method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/entity/LivingEntity;FFFFFF)V",
 		at = @At(
 			value = "INVOKE",
 			target = "Lnet/minecraft/client/network/AbstractClientPlayerEntity;canRenderElytraTexture()Z"
@@ -23,7 +23,7 @@ public class ElytraFeatureRendererMixin {
 	}
 
 	@Redirect(
-		method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/entity/Entity;FFFFFF)V",
+		method = "render",
 		at = @At(
 			value = "INVOKE",
 			target = "Lnet/minecraft/client/network/AbstractClientPlayerEntity;canRenderCapeTexture()Z"

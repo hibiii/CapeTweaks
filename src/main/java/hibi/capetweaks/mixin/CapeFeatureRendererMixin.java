@@ -12,10 +12,10 @@ import net.minecraft.item.ItemStack;
 @Mixin(CapeFeatureRenderer.class)
 public class CapeFeatureRendererMixin {
 	@Redirect(
-		method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/entity/Entity;FFFFFF)V",
+		method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/client/network/AbstractClientPlayerEntity;FFFFFF)V",
 		at = @At(
 			value = "INVOKE",
-			target = "Lnet/minecraft/item/Item;isOf(Lnet/minecraft/item/Item;)Z"
+			target = "Lnet/minecraft/item/ItemStack;isOf(Lnet/minecraft/item/Item;)Z"
 		)
 	)
 	private boolean hasElytra(ItemStack is, Item i) {
