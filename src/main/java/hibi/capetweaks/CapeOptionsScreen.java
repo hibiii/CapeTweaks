@@ -2,16 +2,15 @@ package hibi.capetweaks;
 
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.ScreenTexts;
+import net.minecraft.client.gui.screen.option.GameOptionsScreen;
 import net.minecraft.client.gui.widget.ButtonWidget;
 import net.minecraft.client.gui.widget.CyclingButtonWidget;
 import net.minecraft.client.toast.SystemToast;
 import net.minecraft.text.TranslatableText;
 
-public class CapeOptionsScreen extends Screen {
-	private final Screen parent;
+public class CapeOptionsScreen extends GameOptionsScreen {
 	public CapeOptionsScreen(Screen parent) {
-		super(new TranslatableText("capetweaks.options"));
-		this.parent = parent;
+		super(parent, ClientInit.client.options, new TranslatableText("capetweaks.options"));
 	}
 
 	@Override
@@ -53,7 +52,7 @@ public class CapeOptionsScreen extends Screen {
 				this.width / 2 - 100, this.height / 6 + 48,
 				200, 20,
 				ScreenTexts.DONE,
-				button -> this.client.openScreen(this.parent)
+				button -> this.client.setScreen(this.parent)
 			)
 		);
 	}
@@ -61,11 +60,6 @@ public class CapeOptionsScreen extends Screen {
 	@Override
 	public void removed() {
 		this.save();
-	}
-
-	@Override
-	public void onClose() {
-		this.client.openScreen(this.parent);
 	}
 
 	private void save() {
