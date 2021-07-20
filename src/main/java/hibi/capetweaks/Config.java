@@ -3,6 +3,8 @@ package hibi.capetweaks;
 import java.io.IOException;
 
 import hibi.SimpleConfig;
+import net.minecraft.client.toast.SystemToast;
+import net.minecraft.text.TranslatableText;
 
 public class Config {
 
@@ -19,12 +21,21 @@ public class Config {
 		withElytra = CONFIG.getOrDefault("withElytra", false);
 	}
 
-	public static void save() throws IOException {
+	public static void save() {
 		CONFIG.put("unclamp", unclamp);
 		CONFIG.put("lerpMovement", lerpMovement);
 		CONFIG.put("elytraTexture", elytraTexture);
 		CONFIG.put("withElytra", withElytra);
-		CONFIG.save();
+		try {
+			CONFIG.save();
+		}
+		catch (IOException e) {
+			ClientInit.client.getToastManager().add(new SystemToast(
+				null,
+				new TranslatableText("capetweaks.saveError"),
+				new TranslatableText("capetweaks.saveError.description")
+			));
+		}
 	}
 
 	private Config() {}
