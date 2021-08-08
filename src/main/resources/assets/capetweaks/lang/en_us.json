@@ -1,11 +1,15 @@
 {
 	"capetweaks.options": "Cape Options",
+
+	"capetweaks.options.category.general": "General",
 	"capetweaks.options.unclamp": "Free-swing capes",
 	"capetweaks.options.lerpMovement": "Smooth movement",
 	"capetweaks.options.elytraTexture": "Custom elytra textures",
 	"capetweaks.options.withElytra": "Capes with elytra",
 	"capetweaks.options.disableCapes": "Disable capes entirely",
 	"capetweaks.options.filterCapes": "Filter specific capes",
+
+	"capetweaks.options.category.filter": "Filtered capes",
 	"capetweaks.capes.minecon": "Minecon capes",
 	"capetweaks.capes.mojang": "Mojang capes",
 	"capetweaks.capes.translator": "Translator capes",
@@ -13,6 +17,7 @@
 	"capetweaks.capes.crosspromotion": "Cross-promotion capes",
 	"capetweaks.capes.migration": "Migrator capes",
 	"capetweaks.capes.unique": "Capes one-of-a-kind",
+
 	"capetweaks.saveError": "Unable to save config file",
 	"capetweaks.saveError.description": "Changes to settings will be lost",
 	"capetweaks.discord.hibi": "Hibi's Discord",

@@ -3,19 +3,48 @@ package hibi.capetweaks;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 
-import me.shedaniel.clothconfiglite.api.ConfigScreen;
+import me.shedaniel.clothconfig2.api.ConfigBuilder;
+import me.shedaniel.clothconfig2.api.ConfigCategory;
+import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
 import net.minecraft.text.TranslatableText;
 
 public class MenuIntegration implements ModMenuApi {
 	@Override
 	public ConfigScreenFactory<?> getModConfigScreenFactory() {
 		return parent -> {
-			ConfigScreen screen = ConfigScreen.create(new TranslatableText("capetweaks.options"), parent);
-			screen.add(new TranslatableText("capetweaks.options.unclamp"), Config.unclamp, () -> false, (in) -> { Config.unclamp = (boolean) in; });
-			screen.add(new TranslatableText("capetweaks.options.lerpMovement"), Config.lerpMovement, () -> false, (in) -> { Config.lerpMovement = (boolean) in; });
-			screen.add(new TranslatableText("capetweaks.options.elytraTexture"), Config.elytraTexture, () -> true, (in) -> { Config.elytraTexture = (boolean) in; });
-			screen.add(new TranslatableText("capetweaks.options.disableCapes"), Config.disableCapes, () -> false, (in) -> { Config.disableCapes = (boolean) in; });
-			return screen.get();
+			ConfigBuilder builder = ConfigBuilder.create()
+				.setParentScreen(parent)
+				.setTitle(new TranslatableText("capetweaks.options"));
+			ConfigEntryBuilder entryBuilder = builder.entryBuilder();
+
+			ConfigCategory general = builder.getOrCreateCategory(new TranslatableText("capetweaks.options.category.general"));
+			
+			general.addEntry(entryBuilder.startBooleanToggle(
+				new TranslatableText("capetweaks.options.unclamp"), Config.unclamp)
+				.setDefaultValue(false)
+				.setSaveConsumer(in -> Config.unclamp = in)
+			.build());
+			
+			general.addEntry(entryBuilder.startBooleanToggle(
+				new TranslatableText("capetweaks.options.lerpMovement"), Config.unclamp)
+				.setDefaultValue(false)
+				.setSaveConsumer(in -> Config.lerpMovement = in)
+			.build());
+			
+			general.addEntry(entryBuilder.startBooleanToggle(
+				new TranslatableText("capetweaks.options.elytraTexture"), Config.elytraTexture)
+				.setDefaultValue(true)
+				.setSaveConsumer(in -> Config.elytraTexture = in)
+			.build());
+
+			general.addEntry(entryBuilder.startBooleanToggle(
+				new TranslatableText("capetweaks.options.disableCapes"), Config.disableCapes)
+				.setDefaultValue(false)
+				.setSaveConsumer(in -> Config.disableCapes = in)
+			.build());
+
+			builder.setSavingRunnable(() -> Config.save());
+			return builder.build();
 		};
 	}
 }
