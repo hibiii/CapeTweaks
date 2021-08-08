@@ -4,6 +4,7 @@
 	"capetweaks.options.lerpMovement": "Smooth movement",
 	"capetweaks.options.elytraTexture": "Custom elytra textures",
 	"capetweaks.options.withElytra": "Capes with elytra",
+	"capetweaks.options.disableCapes": "Disable capes entirely",
 	"capetweaks.saveError": "Unable to save config file",
 	"capetweaks.saveError.description": "Changes to settings will be lost",
 	"capetweaks.discord.hibi": "Hibi's Discord",

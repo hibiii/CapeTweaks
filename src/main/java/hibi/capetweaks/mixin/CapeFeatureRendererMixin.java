@@ -2,8 +2,10 @@ package hibi.capetweaks.mixin;
 
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
+import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
 import org.spongepowered.asm.mixin.injection.Redirect;
+import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import hibi.capetweaks.Config;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
@@ -27,10 +29,26 @@ public class CapeFeatureRendererMixin {
 		return MathHelper.clamp(v, m, n);
 	}
 
-	@ModifyVariable(method = "render", at = @At("STORE"), ordinal = 6)
+	@ModifyVariable(
+		method = "render",
+		at = @At("STORE"),
+		ordinal = 6
+	)
 	private float lerpMovement(float n, MatrixStack matrixStack, VertexConsumerProvider vertexConsumerProvider, int i, AbstractClientPlayerEntity abstractClientPlayerEntity, float f, float g, float h, float j, float k, float l) {
 		if(Config.lerpMovement)
     		return MathHelper.lerp(h, abstractClientPlayerEntity.prevBodyYaw, abstractClientPlayerEntity.bodyYaw);
 		return abstractClientPlayerEntity.bodyYaw;
 	}
+
+	@Inject(
+		method = "render",
+		at = @At("HEAD"),
+		cancellable = true
+	)
+	private void renderCancel(CallbackInfo info) {
+		if(Config.disableCapes)
+			info.cancel();
+		return;
+	}
+	
 }
