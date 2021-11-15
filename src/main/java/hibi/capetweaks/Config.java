@@ -20,6 +20,7 @@ public class Config {
 		lerpMovement = CONFIG.getOrDefault("lerpMovement", false);
 		elytraTexture = CONFIG.getOrDefault("elytraTexture", true);
 		disableCapes = CONFIG.getOrDefault("disableCapes", false);
+		CapeLibrary.init(CONFIG);
 	}
 
 	public static void save() {
@@ -27,6 +28,7 @@ public class Config {
 		CONFIG.put("lerpMovement", lerpMovement);
 		CONFIG.put("elytraTexture", elytraTexture);
 		CONFIG.put("disableCapes", disableCapes);
+		CapeLibrary.save(CONFIG);
 		try {
 			CONFIG.save();
 		}

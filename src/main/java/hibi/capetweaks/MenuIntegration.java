@@ -6,6 +6,7 @@ import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.clothconfig2.api.ConfigBuilder;
 import me.shedaniel.clothconfig2.api.ConfigCategory;
 import me.shedaniel.clothconfig2.api.ConfigEntryBuilder;
+import me.shedaniel.clothconfig2.impl.builders.SubCategoryBuilder;
 import net.minecraft.text.TranslatableText;
 
 public class MenuIntegration implements ModMenuApi {
@@ -42,6 +43,17 @@ public class MenuIntegration implements ModMenuApi {
 				.setDefaultValue(false)
 				.setSaveConsumer(in -> Config.disableCapes = in)
 			.build());
+
+			SubCategoryBuilder capeCategory = entryBuilder.startSubCategory(new TranslatableText("capetweaks.options.capeSub")).setExpanded(false);
+
+			capeCategory.add(entryBuilder.startTextDescription(new TranslatableText("capetweaks.options.capeSub.relog")).build());
+			capeCategory.add(entryBuilder.startBooleanToggle(
+				new TranslatableText("capetweaks.cape.migrator"), CapeLibrary.db.get(CapeLibrary.MIGRATOR))
+				.setDefaultValue(true)
+				.setSaveConsumer(bool -> CapeLibrary.db.put(CapeLibrary.MIGRATOR, bool))
+				.build());
+			
+				general.addEntry(capeCategory.build());
 
 			builder.setSavingRunnable(() -> Config.save());
 			return builder.build();
