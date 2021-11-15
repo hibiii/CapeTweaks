@@ -5,7 +5,8 @@
   "compatibilityLevel": "JAVA_16",
   "client": [
     "ElytraFeatureRendererMixin",
-    "CapeFeatureRendererMixin"
+    "CapeFeatureRendererMixin",
+    "PlayerSkinProviderMixin"
   ],
   "injectors": {
     "defaultRequire": 1
