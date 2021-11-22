@@ -4,7 +4,6 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.ModifyVariable;
-import org.spongepowered.asm.mixin.injection.Redirect;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 import hibi.capetweaks.Config;
@@ -16,19 +15,6 @@ import net.minecraft.util.math.MathHelper;
 
 @Mixin(CapeFeatureRenderer.class)
 public class CapeFeatureRendererMixin {
-	@Redirect(
-		method = "render(Lnet/minecraft/client/util/math/MatrixStack;Lnet/minecraft/client/render/VertexConsumerProvider;ILnet/minecraft/client/network/AbstractClientPlayerEntity;FFFFFF)V",
-		at = @At(
-			value = "INVOKE",
-			target = "Lnet/minecraft/util/math/MathHelper;clamp(FFF)F"
-		)
-	)
-	private float unclamp(float v, float m, float n) {
-		if(Config.unclamp)
-			return v;
-		return MathHelper.clamp(v, m, n);
-	}
-
 	@ModifyVariable(
 		method = "render",
 		at = @At("STORE"),

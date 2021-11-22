@@ -19,7 +19,7 @@ public final class PlayerSkinProviderMixin {
 		method = "loadSkin(Lcom/mojang/authlib/minecraft/MinecraftProfileTexture;Lcom/mojang/authlib/minecraft/MinecraftProfileTexture$Type;Lnet/minecraft/client/texture/PlayerSkinProvider$SkinTextureAvailableCallback;)Lnet/minecraft/util/Identifier;",
 		cancellable = true)
 	protected void filterCapes(MinecraftProfileTexture texture, MinecraftProfileTexture.Type type, PlayerSkinProvider.SkinTextureAvailableCallback callback, CallbackInfoReturnable<Identifier> info) {
-		if(CapeLibrary.isBlocked(texture.getUrl())) {
+		if(!CapeLibrary.isShown(texture.getUrl())) {
 			info.setReturnValue(null);
 			info.cancel();
 		}

@@ -10,7 +10,41 @@
 
 	"capetweaks.options.capeSub": "Show or Hide Capes",
 	"capetweaks.options.capeSub.relog": "You may need to relog for changes to take effect.",
+
 	"capetweaks.cape.migrator": "Show Migrator Cape",
+	"capetweaks.cape.unknown": "Show Unknown Capes",
+	"capetweaks.cape.unknown.tip": "Third party capes may be picked up by this option.",
+
+	"capetweaks.options.capeSub.minecon": "Minecraft Festival Capes",
+	"capetweaks.cape.minecon_2011": "Show MINECON 2011 Cape",
+	"capetweaks.cape.minecon_2012": "Show MINECON 2012 Cape",
+	"capetweaks.cape.minecon_2013": "Show MINECON 2013 Cape",
+	"capetweaks.cape.minecon_2015": "Show MINECON 2015 Cape",
+	"capetweaks.cape.minecon_2016": "Show MINECON 2016 Cape",
+	"capetweaks.cape.minecon_2022": "Show Minecraft Festival 2022 Cape",
+
+	"capetweaks.options.capeSub.community": "Community Reward Capes",
+	"capetweaks.cape.translator": "Show Translator Cape",
+	"capetweaks.cape.translator_chinese": "Show Chinese Translator Cape",
+	"capetweaks.cape.map_maker": "Show Realms Mapmaker Cape",
+	"capetweaks.cape.moderator": "Show Mojira Moderator Cape",
+	"capetweaks.cape.cobalt": "Show Cobalt Cape",
+	"capetweaks.cape.scrolls": "Show Scrolls Champion Cape",
+
+	"capetweaks.options.capeSub.personal": "Personal Capes",
+	"capetweaks.cape.millionth_sale": "Show Millionth Customer Cape",
+	"capetweaks.cape.dannybstyle": "Show dannyBstyle's Cape",
+	"capetweaks.cape.julianclark": "Show JulianClark's Cape",
+	"capetweaks.cape.cheapshot": "Show cheapsh0t's Cape",
+	"capetweaks.cape.mrmessiah": "Show MrMessiah's Cape",
+	"capetweaks.cape.prismarine": "Show Prismarine Cape",
+	"capetweaks.cape.turtle": "Show Turtle Cape",
+	"capetweaks.cape.birthday": "Show Birthday Cape",
+
+	"capetweaks.options.capeSub.mojang": "Mojang Capes",
+	"capetweaks.cape.mojang_old": "Show Classic Mojang Cape",
+	"capetweaks.cape.mojang": "Show Mojang Cape",
+	"capetweaks.cape.mojang_new": "Show Mojang Studios Cape",
 
 	"capetweaks.saveError": "Unable to save config file",
 	"capetweaks.saveError.description": "Changes to settings will be lost",

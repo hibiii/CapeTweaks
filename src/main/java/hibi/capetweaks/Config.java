@@ -8,7 +8,6 @@ import net.minecraft.text.TranslatableText;
 
 public class Config {
 
-	public static boolean unclamp;
 	public static boolean lerpMovement;
 	public static boolean elytraTexture;
 	public static boolean disableCapes;
@@ -16,7 +15,6 @@ public class Config {
 
 	public static void init() {
 		CONFIG = SimpleConfig.of("capetweaks").request();
-		unclamp = CONFIG.getOrDefault("unclamp", false);
 		lerpMovement = CONFIG.getOrDefault("lerpMovement", false);
 		elytraTexture = CONFIG.getOrDefault("elytraTexture", true);
 		disableCapes = CONFIG.getOrDefault("disableCapes", false);
@@ -24,7 +22,6 @@ public class Config {
 	}
 
 	public static void save() {
-		CONFIG.put("unclamp", unclamp);
 		CONFIG.put("lerpMovement", lerpMovement);
 		CONFIG.put("elytraTexture", elytraTexture);
 		CONFIG.put("disableCapes", disableCapes);
