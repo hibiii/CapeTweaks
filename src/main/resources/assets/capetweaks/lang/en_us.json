@@ -49,6 +49,6 @@
 	"capetweaks.saveError": "Unable to save config file",
 	"capetweaks.saveError.description": "Changes to settings will be lost",
 	"capetweaks.discord.hibi": "Hibi's Discord",
-	"modmenu.descriptionTranslation.capetweaks": "This mod changes cape physics and lets you hide individual vanilla capes, all of this configurable. This mod does not add capes, and is intended for vanilla capes. Modded capes are not guaranteed to work.",
+	"modmenu.descriptionTranslation.capetweaks": "This mod lets you change small things about capes, as well as letting you hide individual vanilla capes, all of this configurable. This mod does not add capes, and is intended for vanilla capes. Modded capes are not guaranteed to work.",
 	"modmenu.summaryTranslation.capetweaks": "A literal mod on capes..."
 }
