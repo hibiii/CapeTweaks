@@ -4,7 +4,7 @@ import java.io.IOException;
 
 import hibi.SimpleConfig;
 import net.minecraft.client.toast.SystemToast;
-import net.minecraft.text.TranslatableText;
+import net.minecraft.text.Text;
 
 public class Config {
 
@@ -32,8 +32,8 @@ public class Config {
 		catch (IOException e) {
 			ClientInit.client.getToastManager().add(new SystemToast(
 				null,
-				new TranslatableText("capetweaks.saveError"),
-				new TranslatableText("capetweaks.saveError.description")
+				Text.translatable("capetweaks.saveError"),
+				Text.translatable("capetweaks.saveError.description")
 			));
 		}
 	}
