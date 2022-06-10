@@ -18,7 +18,7 @@ public final class CapeLibrary {
 		MINECON_2013 =       "/153b1a0dfcbae953cdeb6f2c2bf6bf79943239b1372780da44bcbb29273131da",
 		MINECON_2015 =       "/b0cc08840700447322d953a02b965f1d65a13a603bf64b17c803c21446fe1635",
 		MINECON_2016 =       "/e7dfea16dc83c97df01a12fabbd1216359c0cd0ea42f9999b6e97c584963e980",
-		MINECON_2022 =       "/unknown",
+		MINECON_2023 =       "/unknown",
 		// Personal Capes
 		MILLIONTH_SALE =     "/70efffaf86fe5bc089608d3cb297d3e276b9eb7a8f9f2fe6659c23a2d8b18edf",
 		DANNYBSTYLE =        "/bcfbe84c6542a4a5c213c1cacf8979b5e913dcb4ad783a8b80e3c4a7d5c8bdac",
@@ -59,7 +59,7 @@ public final class CapeLibrary {
 		 db.put(MINECON_2013, config.getOrDefault("cape:minecon_2013", true));
 		 db.put(MINECON_2015, config.getOrDefault("cape:minecon_2015", true));
 		 db.put(MINECON_2016, config.getOrDefault("cape:minecon_2016", true));
-		 db.put(MINECON_2022, config.getOrDefault("cape:minecon_2022", true));
+		 db.put(MINECON_2023, config.getOrDefault("cape:minecon_2023", true));
 		 db.put(MILLIONTH_SALE, config.getOrDefault("cape:millionth_sale", true));
 		 db.put(DANNYBSTYLE, config.getOrDefault("cape:dannybstyle", true));
 		 db.put(JULIANCLARK, config.getOrDefault("cape:julianclark", true));
@@ -86,7 +86,7 @@ public final class CapeLibrary {
 		config.put("cape:minecon_2013", db.get(MINECON_2013));
 		config.put("cape:minecon_2015", db.get(MINECON_2015));
 		config.put("cape:minecon_2016", db.get(MINECON_2016));
-		config.put("cape:minecon_2022", db.get(MINECON_2022));
+		config.put("cape:minecon_2023", db.get(MINECON_2023));
 		config.put("cape:millionth_sale", db.get(MILLIONTH_SALE));
 		config.put("cape:dannybstyle", db.get(DANNYBSTYLE));
 		config.put("cape:julianclark", db.get(JULIANCLARK));

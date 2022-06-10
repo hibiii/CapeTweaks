@@ -75,9 +75,9 @@ public class MenuIntegration implements ModMenuApi {
 				.setSaveConsumer(bool -> CapeLibrary.db.put(CapeLibrary.MINECON_2016, bool))
 				.build());
 			capeCategory.add(entryBuilder.startBooleanToggle(
-				Text.translatable("capetweaks.cape.minecon_2022"), CapeLibrary.db.get(CapeLibrary.MINECON_2022))
+				Text.translatable("capetweaks.cape.minecon_2023"), CapeLibrary.db.get(CapeLibrary.MINECON_2023))
 				.setDefaultValue(true)
-				.setSaveConsumer(bool -> CapeLibrary.db.put(CapeLibrary.MINECON_2022, bool))
+				.setSaveConsumer(bool -> CapeLibrary.db.put(CapeLibrary.MINECON_2023, bool))
 				.build());
 
 			capeCategory.add(entryBuilder.startTextDescription(Text.translatable("capetweaks.options.capeSub.community")).build());
